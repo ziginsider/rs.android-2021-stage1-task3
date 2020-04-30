@@ -188,4 +188,4 @@ The order of images vs output lines is from left to right, from top to bottom.
 
 Note: trailing null nodes are omitted from the output.
 </br></br>
-:ok_hand:
+:trophy:
