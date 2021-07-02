@@ -1,6 +1,4 @@
-package subtask5
-
-import kotlin.reflect.KClass
+package subtask3
 
 class TelephoneFinder {
 

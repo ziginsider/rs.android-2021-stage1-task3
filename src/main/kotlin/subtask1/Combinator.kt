@@ -1,9 +1,9 @@
-package subtask4
+package subtask1
 
-class SquareDecomposer {
+class Combinator {
 
     // TODO: Complete the following function
-    fun decomposeNumber(number: Int): Array<Int>? {
+    fun checkChooseFromArray(array: Array<Int>): Int? {
         throw NotImplementedError("Not implemented")
     }
 }

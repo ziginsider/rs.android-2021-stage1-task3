@@ -1,9 +1,9 @@
-package subtask6
+package subtask2
 
-class FullBinaryTrees {
+class SquareDecomposer {
 
     // TODO: Complete the following function
-    fun stringForNodeCount(count: Int): String {
+    fun decomposeNumber(number: Int): Array<Int>? {
         throw NotImplementedError("Not implemented")
     }
 }

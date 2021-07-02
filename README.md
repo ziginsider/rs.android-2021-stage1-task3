@@ -1,7 +1,7 @@
 # Task 3
-:mortar_board: :mortar_board: :mortar_board: Task 3 состоит из шести задач. Все заготовки задач находятся в корне проекта в папке *src/main/kotlin*. В каждой заготовке вам дан класс с открытым методом, в который нужно написать код для решения поставленной задачи. Все - как и для Task 1 или 2.
+:mortar_board: :mortar_board: :mortar_board: Task 3 состоит из трех задач. Все заготовки задач находятся в корне проекта в папке *src/main/kotlin*. В каждой заготовке вам дан класс с открытым методом, в который нужно написать код для решения поставленной задачи. Все - как и для Task 1 или 2.
 
-<img alt="structure_of_tasks" src="/images/img1.PNG" />
+<img alt="structure_of_tasks" src="/images/img1.png" />
 
 Тесты находятся в папке *src/test/kotlin*. Тесты можно запускать различными способами. Например, выполнить таск Gradle: *Gradle -> Tasks -> verification -> test*. Тогда прогонятся все unit-тесты сразу:
 
@@ -9,11 +9,11 @@
 
 Или открыть класс с тестом и нажать на зелёный треугольник рядом с объявлением класса. Если все тесты пройдены успешно :smiley_cat:, они отмечаются зеленым значком :heavy_check_mark:, иначе :scream_cat: - красным :heavy_exclamation_mark:
 
-:point_up: Чтобы тесты запускались без проблем:
-- Используйте стабильную версию Android Studio
-- Клонируйте проект через консоль и затем открывайте в студии.
+:exclamation: В последних версиях Android Studio (>= 4.2) убрали по-умолчанию построение дерева tasks Gradle. Поэтому вы можете не найти задачу *test* в `Gradle -> Tasks -> verification -> test` и тесты могут не запускаться.
 
-В любом случае, запуск через пункт Gradle в студии или через консоль будет работать. 
+Во-первых, эту несправедливость несложно поправить. Зайдите в `File -> Settings -> Experimental` и отключите `Do not build Gradle task list during Gradle sync`. Затем сделайте sync проекта с Gradle: `File -> Sync Project with Gradle Files`
+
+Во-вторых, всегда можно запустить тесты в консоли, набрав `./gradlew test`.
 
 Если вы пришли к выводу, что выполнили максимум того что могли сделать, то сделайте Submit задачи через 
 https://app.rs.school/
@@ -21,20 +21,7 @@ https://app.rs.school/
 
 ## Условия задач
 
-### 1) Polynomial
-
-A polynomial function can be represented by a vector of its coefficients. For instance p(x) = 5x^3 + 2x + 3 can be described as (5, 0, 2, 3). The latter representation is more 'computational friendly', while the first representation is more human readable.
-
-Your task is to create function, which converts array of coefficients to equation. The function takes an array with the *Int* coefficients as a parameter. The coefficients array starts with the highest degree. The function should return the polynomial in a simpel human readable form. This means you skip 0 coefficient terms completely and you not write down 1 coefficients.
-
-Please note that numbers could be negative. In case the input array is empty, return *null*.
-
-Here is the example:
-
-Input array [4, 0, 5, 20] should return "4x^3 + 5x + 20".
-</br></br>
-
-### 2) Combinator
+### 1) Combinator
 
 You know combinations: for example, if you take 5 cards from a 52 cards deck you have 2,598,960 different combinations.
 
@@ -61,24 +48,7 @@ Here's the examples:
 [4, 2] would return *null* 
 </br></br>
 
-### 3) Array Calculator
-
-Your task is to implement the method, which calculates a product of N integers in array.
-
-Example:
-
-If we have an array: [1,2,3,4,5,6,7,8,9,0] and N = 3, the result of the function should be equal 504 (7 * 8 * 9).
-
-If we have an array: [-1, 2, -3, 4, -5, 6, -7] and N = 5, the result should be equal to 1680 (2 * 4 * -5 * 6 * -7).
-
-• Positive, negative and zero integers are calculated.
-
-• Non-integer values (string, etc.) should not be included in calculation.
-
-• If N is higher than number of integers in array, include all available integers.
-</br></br>
-
-### 4) Square Decomposer
+### 2) Square Decomposer
 
 My younger sister came back home from school with the following task: given a squared sheet of paper she has to cut it in pieces which, when assembled, give squares the sides of which form an increasing sequence of numbers. At the beginning it was lot of fun but little by little we were tired of seeing the pile of torn paper. So we decided to write a program that could help us and protects trees.
 
@@ -109,7 +79,7 @@ decompose 50 returns [1, 3, 5, 8, 49]
 decompose 4 returns *null*
 </br></br>
 
-### 5) Telephone Finder
+### 3) Telephone Finder
 
 Started in 2008 and recently resurging in popularity, a game known as Number Neighbour or Text Door Neighbor has people sending a text message to phone numbers near their own.
 
@@ -146,46 +116,6 @@ to 2.
 Do not consider numbers that are diagonal to each other adjacent. In case input number is negative return *null*.
 
 Do not worry about the order of number strings in the array being returned.
-</br></br>
 
-
-### 6) Full Binary Trees
-
-A full binary tree is a binary tree where each node has exactly 0 or 2 children.
-
-Return a list of all possible full binary trees with N nodes.
-
-Each node of each tree in the answer must have its value set to 0.
-
-You may return the final list of trees in any order.
-
-Example:
-
-Input: 7
-
-Output:
-
-[
-
-[0,0,0,null,null,0,0,null,null,0,0],
-
-[0,0,0,null,null,0,0,0,0],
-
-[0,0,0,0,0,0,0],
-
-[0,0,0,0,0,null,null,null,null,0,0],
-
-[0,0,0,0,0,null,null,0,0]
-
-]
-
-
-For a visual explanation on the output have a look at the following example:
-
-<img alt="example trees" src="/images/ExampleTrees.png" />
-
-The order of images vs output lines is from left to right, from top to bottom.
-
-Note: trailing null nodes are omitted from the output.
 </br></br>
 :trophy:

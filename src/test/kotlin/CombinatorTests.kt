@@ -1,6 +1,6 @@
 import org.junit.Assert.assertEquals
 import org.junit.Test
-import subtask2.Combinator
+import subtask1.Combinator
 
 class CombinatorTests {
 

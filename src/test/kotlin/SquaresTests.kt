@@ -1,7 +1,7 @@
 import org.junit.Assert.assertArrayEquals
 import org.junit.Assert.assertNull
 import org.junit.Test
-import subtask4.SquareDecomposer
+import subtask2.SquareDecomposer
 
 class SquaresTests {
 
