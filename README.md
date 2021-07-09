@@ -89,7 +89,7 @@ We're going to take this a step further and think about neighbors based on a cla
 
 First, let's take a look at the classic phone keypad:
 
-<img alt="phone keypad" src="/images/PhoneKeypad.png" />
+<img alt="phone keypad" src="phone-number-keypad.jpg" />
 
 We can consider certain numbers adjacent if they appear directly next to or above/below each other. For example, 1 is adjacent to 2 and 4 (and nothing else), while 5 is adjacent to 2, 4, 6, and 8.
 
